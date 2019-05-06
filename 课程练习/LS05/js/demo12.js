@@ -7,19 +7,25 @@ console.log(1+{}); //"1[object Object]"
 console.log(true+true); //2
 console.log("5"-2); //3
 
-//
+
+//?????
 var x = "1";
 console.log(++x); //2 注意++和--的隐式类型转换
+console.log(typeof(++x));//number
+console.log(--x); //1
+console.log(x++); //1
+console.log(x--); //2 
 var x = "1";
-console.log(x+1);//11
-// 思考：+= 是转成字符串类型还是转成数字类型
-// 不同情况下转换的类型不同
+console.log(x+1);//11 
+// 思考：+= 是转成字符串类型还是转成数字类型 
+// 不同情况下转换的类型不同,即与x初值有关系。
 var x = "1";
-console.log(x+=1);
+console.log(x+=1);//11    字符串的拼接
+console.log(typeof(x+=1));//string
 var x = 1;
-console.log(x+=1);
-
+console.log(x+=1);//2
+console.log(typeof(x+=1));//number
 //回顾++i 与 i++
 var i=1;
 var y = ++i + ++i + ++i;
-console.log(y);
+console.log(y);//9

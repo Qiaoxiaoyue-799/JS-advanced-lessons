@@ -21,6 +21,14 @@ test2();//window
 
 //对象方法调用
 var obj = {
+    x : 0,
+    //test内部的this指向调用该方法的对象
+    test: function(){
+        console.log(this.x);
+    }
+}
+
+var obj = {
     name:"obj",
     x:23,
     test:function(){
@@ -90,7 +98,10 @@ objA.foo = function(){
     console.log(this.name);
 };
 objA.foo();//AA
+//方法名.call 可以切换方法调用的对象。
+//apply() 在无参时与call()相同，有参数时不同。
 objA.foo.call(objB);//BB
+objA.foo.apply(objB);//BB
 
 //间接调用 实例二 移花接木 吸星大法
 var fish = {
@@ -124,12 +135,12 @@ function test() {
 test(1,2,3,"4",5);
 
 
-//构造函数
+//构造函数  （方法名首字母大写，构造函数不能实例化）
 function Person(name){
     this.name = name;
 }
 Person.prototype.sayHi = function(){
     console.log("Hi,i'm "+this.name);
-};
-var p1 = new Person("Jack");
+};//可以共用
+var p1 = new Person("Jack");//this指向实例化的对象
 p1.sayHi();//Hi,i'm Jack

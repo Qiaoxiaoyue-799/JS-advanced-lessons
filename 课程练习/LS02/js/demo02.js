@@ -10,7 +10,8 @@ function foo() {
     var m = true;
     var str = "Hello World"; // str:"Hello World"存在栈中
 
-    // obj的引用存在栈中，{value:"Hello World"}存在堆中，通过栈中的变量名obj(访问地址)访问
+    // obj的引用存在栈中，{value:"Hello World"}存在堆中，
+    //通过栈中的变量名obj(访问地址)访问
     var obj = { value: "Hello World" };
 };
 foo();

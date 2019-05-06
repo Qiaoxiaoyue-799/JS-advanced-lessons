@@ -3,7 +3,7 @@
  */
 
 
-// switch 语句在比较值时使用的是全等操作符,因此不会发生类型转换
+// switch 语句在比较值时使用的是全等操作符,因此不会发生隐式类型转换
 var i = "1";
 switch(i){
     case 1:
@@ -25,7 +25,7 @@ switch(i){
     default:
         console.log("default");
 }
-//此时输出 case 1 String
+//此时输出 case 1 String2
 
 //思考：下边的例子输出什么，考到了switch比较的知识和数据类型中的重点知识
 // var j = 23;

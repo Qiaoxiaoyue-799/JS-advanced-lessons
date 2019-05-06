@@ -4,7 +4,7 @@
 
 //下例中有几个是false？（A:0个, B:1个, C:2个, D:3个），运行一下看看
 console.log(3===3);
-console.log(3==="3");
+console.log(3==="3");//false
 console.log(3=="3");
 console.log(3==new String(3));
 console.log(3===new String(3));

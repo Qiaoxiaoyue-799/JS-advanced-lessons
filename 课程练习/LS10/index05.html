@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/demo05.js"></script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+<script type="text/javascript">
+	var div1 = document.getElementById("div1");
+	var username = "zhangsan";
+	function foo(){
+		div1.onclick = function(){
+			this.innerHTML = username;//需要寻找三个作用域，执行效率低。
+		}
+	}
+	foo();
+
+	//匿名函数
+	(function(w,d){
+		w.onload = function(){
+		}
+	})(window,document)
+
+
+</script>
+</html>

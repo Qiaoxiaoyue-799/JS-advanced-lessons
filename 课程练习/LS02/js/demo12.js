@@ -11,14 +11,14 @@ console.log(typeof (a<b),a<b);
 
 //算数运算符 与 隐式类型转换 + -
 var c = "img" + 3 +".jpg";
-var d = "23" - 5;
+var d = "23" - 5;//18
 console.log(c,d);
 
 //逻辑运算符 与 隐式类型转换 + -
 var e = !23;
 var f = !!34;//!!""   !!0   !!"abc"  !!undefined  !!null
 var g = !!{};
-console.log(e,f,g);
+console.log(e,f,g);//false true true   ??????
 
 // 流程语句 与 隐式类型转换
 var h = {x:1};

@@ -23,7 +23,7 @@ console.log(typeof Math);//输出function 还是 object ？
 //NaN
 var x = Number("xis021");//试着转成Number类型
 console.log(x);//NaN
-isNaN(x);//true
+isNaN(x);//true (判断是否为非数字)
 typeof NaN;
 
 console.log(Math.log(-1));//NaN

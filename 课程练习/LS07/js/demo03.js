@@ -11,12 +11,14 @@ function test() {
 	// console.log(arguments instanceof Object);
     console.log(Array.prototype.slice.call(arguments));
     var s = "";
+    //arguments获取函数传入的实参，是个类数组对象。
     for (var i = 0; i < arguments.length; i++) {
         s += arguments[i];
     }
     return s;
 }
 test("hello,", "world!");//"hello,world!"
+//属性arguments获得所有实参、类数组对象
 
 
 //实参数小于形参数
