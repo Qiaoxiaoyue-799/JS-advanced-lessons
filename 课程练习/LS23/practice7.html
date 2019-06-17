@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery事件</title>
+</head>
+<body>
+	<div id="container">
+		<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558063793146&di=501786884531e1a2a2ee1a952c0f9a62&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201701%2F19%2Fb7c32f122e4e214bd5a8b505edd6165f.jpeg" id = "img1">
+	</div>
+	<div id = "btnlist">
+		<button id="after"></button>
+		<button id="insertafter"></button>
+	</div>
+</body>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	/*
+		1.向特定的元素后面插入新的节点
+		after()	insertAfter()
+		2.向特定元素的前面插入新的节点
+		before	insertBefore()
+		3.向特定元素标签内部最后的位置添加新的节点
+		append()	appendTo()
+		4.向特定元素标签内部最前的位置添加新的节点
+	*/
+	$("#after").click(function(){
+		var $img2 = $("<img src='2.jpg' />");
+		$("#img1").after($img2);
+	})
+
+	$("#insertafter").click(function(){
+		var $img2 = $("<img src='2.jpg' />");
+		$img2.insertAfter($("#img1"));
+	})
+ 
+</script>
+</html>

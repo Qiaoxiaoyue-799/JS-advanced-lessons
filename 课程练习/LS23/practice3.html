@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery事件</title>
+</head>
+<body>
+	<input type="button" value="绑定点击事件" id="btn1" />
+	<input type="button" name="">
+	<input type="button" name="">
+	<input type="button" name="">
+	<input type="button" name="">
+</body>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	/*
+		jquery包装集，事件方法（回调函数）
+	*/	
+
+	$("#btn1").click(function(){
+		alert("按钮被点击了");
+	})
+	$(":button").click(function(){
+		alert("按钮被点击了");
+	})
+</script>
+</html>

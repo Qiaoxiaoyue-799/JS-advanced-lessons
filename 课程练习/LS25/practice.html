@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			height: 200px;
+			width: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+	</div>
+	<a href="http://www.baidu.com" id="baidu">百度</a>
+</body>
+<script>
+	var div1 = document.getElementById("div1");
+	var baidu = document.getElementById("baidu");
+	//添加事件监听，参数：(事件监听哪个事件，处理方法)
+	div1.addEventListener("click",function(){
+		console.log("div被点击了");
+	})
+	//返回事件触发对象属性
+	// div1.addEventListener("click",function(e){
+	// 	console.log(e);
+	// })
+
+	baidu.addEventListener("click",function(e){
+		//获取事件发生的时间戳
+		//timeStamp捕获时间不够精确
+		var num = e.timeStamp;
+		console.log(new Date(num));
+		//阻止元素的默认操作
+		e.preventDefault();
+	})
+
+</script>
+</html>

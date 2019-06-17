@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	for(var i = 0;i<10000000;i++){
+
+	}
+	console.log("同步执行");
+
+	setTimeout(function(){
+		console.log("异步执行");
+	},1000)
+	console.log("主程序");
+
+	//异步：
+	window.onload = function(){
+		console.log("页面加载完成");
+	}
+
+	var intervalId = setInterval(function(){
+		console.log(i++);
+	},3000)
+
+	/*
+		异步不会阻塞主线程的执行，在满足特定条件时，会反馈到主线程。
+	*/
+
+
+
+	/*
+		ajax可以以异步的方式实现前后端数据的交互。
+	*/
+</script>
+</html>

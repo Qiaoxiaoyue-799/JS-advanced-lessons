@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery事件</title>
+	<style type="text/css">
+		div{
+			height: 300px;
+			width: 300px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<button id="slideUp">slideUp</button>
+	<button id="slideDown">slideDown</button>
+	<button id="fadeIn">fadeIn</button>
+	<button id="fadeOut">fadeOut</button>
+	<button id="animate">animate</button>
+
+</body>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	// $("div").click(function(){
+	// 	$(this).slideUp(4000);
+	// })
+	$("#slideUp").click(function(){
+		$("div").slideUp(4000);
+	})
+	$("#slideDown").click(function(){
+		$("div").slideDown(4000);
+	})
+	//通过改变透明度来切换显示和隐藏
+	$("#fadeIn").click(function(){
+		$("div").fadeIn(4000);
+	})
+	$("#fadeOut").click(function(){
+		$("div").fadeOut(4000);
+	})
+	$("#animate").click(function(){
+		/*同时执行*/
+		// $("div").animate({
+		// 	"margin-left":"500px",
+		// 	"margin-top":"500px",
+		// },3000);
+		/*动画的执行顺序*/
+		$("div").animate({
+			"margin-left":"500px"
+		},2000).animate({
+			"margin-top":"500px"
+		},2000)
+	})
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table width="400px" height="400px border=1px align=center">
+		<tr class="even">
+			<td id="td1"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="odd">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="even">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="odd">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js">
+	
+</script>
+<script type="text/javascript">
+	/*
+		$("")jquery包装集
+
+		选择器：
+			id选择器
+			类选择器
+			标签选择器
+			层级选择器
+	*/
+	//id选择器
+	$("#tb1 .even").css("background","red");
+	$("#tb1 td").css("background","red");
+
+	//过滤
+	$("#tb:first").css("background","red");
+	$("#tb:last").css("background","green");
+
+	$("#tb:even").css("background","blue");
+	$("#tb:odd").css("background","purple");
+
+	/*
+		eq(index) 选中特定元素
+		gt(index) 选中索引值大于index的元素
+		lt(index) 选中索引值小于index的元素
+		not(selector) 从特定集合中排除一些元素
+	*/
+	$("td:eq(2)").css("background","black");
+	$("td:gt(2)").css("background","gray");
+	$("td:lt(2)").css("background","yellow");
+	$("td:not(#td1)").css("background","gray");
+
+</script>
+</html>

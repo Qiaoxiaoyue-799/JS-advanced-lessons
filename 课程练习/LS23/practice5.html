@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery事件</title>
+</head>
+<body>
+	<div>层1</div>
+	<div>层2</div>
+	<div>层3</div>
+</body>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	$("div").mouseover(function(){
+		$(this).css("background-color","blue");
+	})
+	$("div").mouseout(function(){
+		$(this).css("background-color","gray");
+	})
+	$("div").click(function(){
+		$(this).css("background-color","red");
+	})
+</script>
+</html>

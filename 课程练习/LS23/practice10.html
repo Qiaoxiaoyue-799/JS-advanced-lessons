@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery事件</title>
+	<style type="text/css">
+		.imgborder{
+			border:5px solid red;
+		}
+	</style>
+</head>
+<body>
+	<img src="img1.jpg" id="img1">
+	<button id="btn">改变属性</button>
+	<button id="btn1">改变class</button>	
+</body>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+
+	/*
+		val() 用于设置或者获取表单元素的value值
+		html() 用于设置或获取元素双标记标签元素的标签内部的html内容
+		css({"样式名":"样式值"})
+	*/
+	$("#btn").click(function(){
+		$("#img1").attr("src","img2.jpg");//把图片1换成图片2
+		$("#img1").attr("title","这是一张图片");//把图片1换成图片2
+		alert($("#img1").attr("title"));
+		$("#img1").removeAttr("title");//移除图片
+	})
+	$("#btn1").click(function(){
+		$("#img1").addClass("imgborder");
+	})
+	$("#img1").mouseover(function(){
+		$("#img1").addClass("imgborder");
+	})
+	$("#img1").mouseout(function(){
+		$("#img1").removeClass("imgborder");
+	})
+
+/*
+	1.选择器
+	$()
+	$(":eq()")  $("td:even")
+	$("td:odd")  $("td:gt(index)")
+	$("td:lt(index)")
+	$(":text")
+	2.事件
+	mouseover()
+	mouseout()
+	blur()
+	focus()
+	click()
+	3.DOM
+	append()
+	appendTo()
+	after()	insertAfter()
+	before()	insertBefore()
+	prepend()	perpendTo()
+	4.class属性
+	val()	html()	css()
+	attr()	addclass()	removeClass()
+*/
+
+
+</script>
+</html>

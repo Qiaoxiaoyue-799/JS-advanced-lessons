@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<img src="1.jpg">
+	<span id="title"></span>
+	<button id = "btn">
+		jq ajax
+	</button>
+</body>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	/*
+		在前端页面实现jQuery ajax 的请求
+		ajax 请求指明请求的后端程序的地址
+		后端程序接收到请求，做出响应
+		前端接收后端程序的相应内容，并在前端使用。
+
+		前后端文件必须都放在服务器上。
+
+		可以实现页面的局部刷新。
+	*/
+	$("#btn").click(function(){
+		$.ajax({
+			url:"./server.php",//请求地址
+			type:"get",//请求类型
+			success:function(data){
+				$("#title").html(data);
+				console.log(data);
+			}
+			error:function(err){
+				console.log(err);
+			}
+		})
+	})
+</script>
+</html>
